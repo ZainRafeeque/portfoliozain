@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohammed Zain Rafeeque — AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      font-size: 1rem;
+    }
+
+    nav a {
+      color: #888;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 6rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .hero-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1a1a1a;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      background: #2a2a2a;
+      transform: translateY(-2px);
+    }
+
+    /* Section Titles */
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .skill-tag {
+      padding: 0.5rem 1rem;
+      background: #ffffff;
+      color: #000;
+      border-radius: 0.25rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Work Experience */
+    .experience-item {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .experience-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .company-logo {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      padding: 0.5rem;
+    }
+
+    .company-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .experience-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-role {
+      font-size: 1.25rem;
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .experience-period {
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .experience-description {
+      color: #aaa;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-left: 76px;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .project-card {
+      background: #111;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: #333;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 220px;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(17, 17, 17, 0.8) 100%);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.75rem;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .project-description {
+      color: #aaa;
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tag {
+      padding: 0.4rem 0.85rem;
+      background: #1a1a1a;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+      color: #ccc;
+      border: 1px solid #2a2a2a;
+      transition: all 0.2s ease;
+    }
+
+    .project-tag:hover {
+      background: #2a2a2a;
+      border-color: #3a3a3a;
+    }
+
+    /* Education */
+    .education-item {
+      background: #111;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .education-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .education-logo {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      padding: 0.25rem;
+    }
+
+    .education-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .education-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .education-subtitle {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 0.25rem;
+    }
+
+    .education-meta {
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    /* Certifications */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .cert-card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .cert-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-issuer {
+      color: #aaa;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-year {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      margin-top: 6rem;
+      margin-bottom: 4rem;
+    }
+
+    .contact h2 {
+      margin-top: 0;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-links a {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      border-radius: 0.5rem;
+      transition: all 0.3s;
+      font-size: 1.5rem;
+    }
+
+    .contact-links a:hover {
+      background: #1a1a1a;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 1.5rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .hero-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .experience-period {
+        position: static;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-description {
+        margin-left: 0;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div>
+      <h1>hi, i'm mohammed zain rafeeque.</h1>
+      <p class="hero-subtitle">AI Engineer & Data Scientist, building intelligent solutions with NLP, LLMs, and cutting-edge ML technologies.</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/ZainRafeeque" target="_blank" aria-label="GitHub">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/zain-rafeeque/" target="_blank" aria-label="LinkedIn">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="mailto:zainrafeeque@gmail.com" aria-label="Email">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+          </svg>
+        </a>
+        <a href="tel:+971569570799" aria-label="Phone">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="WhatsApp Image 2025-10-07 at 02.27.37_2d4f4822.jpg" alt="Mohammed Zain Rafeeque">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>skills</h2>
+    <div class="skills">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">TensorFlow</span>
+      <span class="skill-tag">PyTorch</span>
+      <span class="skill-tag">LangChain</span>
+      <span class="skill-tag">OpenAI</span>
+      <span class="skill-tag">Groq</span>
+      <span class="skill-tag">NLP</span>
+      <span class="skill-tag">Computer Vision</span>
+      <span class="skill-tag">Deep Learning</span>
+      <span class="skill-tag">OpenCV</span>
+      <span class="skill-tag">NumPy</span>
+      <span class="skill-tag">Pandas</span>
+      <span class="skill-tag">Scikit-learn</span>
+      <span class="skill-tag">Keras</span>
+      <span class="skill-tag">Flask</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">Linux</span>
+      <span class="skill-tag">NLTK</span>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section id="experience">
+    <h2>work experience</h2>
+    
+    <div class="experience-item">
+      <div class="experience-period">2025 - current</div>
+      <div class="experience-header">
+        <div class="company-logo">
+          <img src="1757506317659.jpg" alt="Khansaheb">
+        </div>
+        <div>
+          <div class="experience-title">Khansaheb Sustainability</div>
+          <div class="experience-role">AI Intern</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Deploying RAG + LLM chatbots for intelligent product assistance using LangChain and Groq API. Automating customer inquiries, providing intelligent recommendations, and streamlining support workflows through advanced conversational AI systems.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-period">2025</div>
+      <div class="experience-header">
+        <div class="company-logo">
+          <img src="1736069045693.jpg" alt="Direct Axis">
+        </div>
+        <div>
+          <div class="experience-title">Direct Axis Technology LLC (Daxis)</div>
+          <div class="experience-role">AI Intern</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Implemented intelligent cheque processing system using neural networks and Python. Automated data extraction, validation, and financial workflows, significantly improving processing efficiency and accuracy.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-period">2024 - 2025</div>
+      <div class="experience-header">
+        <div class="company-logo">
+          <img src="Meta Scifor Icon.png" alt="Meta Scifor">
+        </div>
+        <div>
+          <div class="experience-title">Meta Scifor Technologies</div>
+          <div class="experience-role">AI/ML Trainee</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Completed intensive training in ML algorithms and deep learning frameworks. Strengthened practical knowledge in production ML workflows, model deployment, and optimization strategies through hands-on projects.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-period">2024</div>
+      <div class="experience-header">
+        <div class="company-logo">
+          <img src="download1.png" alt="Null Class">
+        </div>
+        <div>
+          <div class="experience-title">Null Class</div>
+          <div class="experience-role">AI & Development Trainee</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Gained hands-on experience with NLTK for NLP, Flask for backend deployment, and integrated advanced language models (Gemini, Palm) through OpenAI API to enhance AI functionality.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-period">2023</div>
+      <div class="experience-header">
+        <div class="company-logo">
+          <img src="download.jpg" alt="ReverTech">
+        </div>
+        <div>
+          <div class="experience-title">ReverTech</div>
+          <div class="experience-role">Python Intern</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Enhanced Python programming skills through practical application, focusing on data structures, algorithms, and best coding practices for scalable software development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.png" alt="RAG-Powered Chatbot">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">RAG-Powered Chatbot</h3>
+          <p class="project-description">
+            Deploying intelligent customer assistance system using LangChain and Groq, automating inquiries and product recommendations with retrieval-augmented generation.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">langchain</span>
+            <span class="project-tag">LLM</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">groq</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_mxm694mxm694mxm6.png" alt="Malayalam Speech-to-Text">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Malayalam Speech-to-Text System</h3>
+          <p class="project-description">
+            Pioneered multilingual communication solution enabling seamless Malayalam ↔ English translation with 40% improved efficiency using advanced NLP models and speech recognition.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">NLP</span>
+            <span class="project-tag">speech processing</span>
+            <span class="project-tag">deep learning</span>
+            <span class="project-tag">python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.png" alt="AI Learning Style Predictor">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">AI Learning Style Predictor</h3>
+          <p class="project-description">
+            Built ML system personalizing education for primary students. Achieved 10% accuracy boost through innovative feature engineering and data unification techniques.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">tensorflow</span>
+            <span class="project-tag">machine learning</span>
+            <span class="project-tag">edtech</span>
+            <span class="project-tag">data science</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_uxbgzxuxbgzxuxbg.png" alt="Intelligent Cheque Processing">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Intelligent Cheque Processing</h3>
+          <p class="project-description">
+            Implemented neural network-based system for automated cheque extraction and validation, streamlining financial workflows with high-accuracy OCR.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">neural networks</span>
+            <span class="project-tag">OCR</span>
+            <span class="project-tag">python</span>
+            <span class="project-tag">opencv</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.png" alt="Image Processing Pipeline">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Image Processing Pipeline</h3>
+          <p class="project-description">
+            Developed advanced preprocessing pipeline achieving 20% accuracy improvement through sophisticated noise reduction and data augmentation strategies.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">opencv</span>
+            <span class="project-tag">pytorch</span>
+            <span class="project-tag">computer vision</span>
+            <span class="project-tag">preprocessing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>education</h2>
+    <div class="education-item">
+      <div class="education-header">
+        <div class="education-logo">
+          <img src="vimaljyothi.jpg" alt="Vimal Jyothi">
+        </div>
+        <div>
+          <div class="education-title">Vimal Jyothi Engineering College</div>
+          <div class="education-subtitle">Bachelor of Technology in Artificial Intelligence and Data Science</div>
+          <div class="education-meta">APJ Abdul Kalam Technological University | AICTE Approved | Dec 2020 - Sep 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="font-size: 2rem; margin-top: 3rem;">certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-title">One Million Prompters - AI Prompt Engineering</div>
+        <div class="cert-issuer">Dubai Centre for Artificial Intelligence (DCAI)</div>
+        <div class="cert-year">2025</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-title">Data Analytics Assessment</div>
+        <div class="cert-issuer">LearnTube (Career Ninja)</div>
+        <div class="cert-year">2024</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-title">Deep Learning - A Real-World Approach</div>
+        <div class="cert-issuer">Microsoft Research Scientist Mentorship</div>
+        <div class="cert-year">2024</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-title">Linux Shell Programming</div>
+        <div class="cert-issuer">IIT Bombay</div>
+        <div class="cert-year">2023</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-title">Python Programming</div>
+        <div class="cert-issuer">IIT Bombay</div>
+        <div class="cert-year">2023</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>get in touch</h2>
+    <p>Shoot me a message on <a href="https://linkedin.com/in/zain-rafeeque/" target="_blank">linkedin here</a></p>
+    <p>or email me at <a href="mailto:zainrafeeque@gmail.com">zainrafeeque@gmail.com</a></p>
+    
+    <div class="contact-links">
+      <a href="https://github.com/ZainRafeeque" target="_blank" aria-label="GitHub">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/zain-rafeeque/" target="_blank" aria-label="LinkedIn">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+      </a>
+      <a href="mailto:zainrafeeque@gmail.com" aria-label="Email">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+        </svg>
+      </a>
+      <a href="tel:+971569570799" aria-label="Phone">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 2rem 0; color: #666; font-size: 0.9rem;">
+    <p>© 2025 Mohammed Zain Rafeeque. All rights reserved.</p>
+    <p style="margin-top: 0.5rem;">Built with passion for AI | Dubai, UAE 🇦🇪</p>
+  </footer>
+</body>
+</html>
