@@ -161,6 +161,15 @@
       object-fit: contain;
     }
 
+    .company-logo.text-logo {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      padding: 0;
+    }
+
     .experience-title {
       font-size: 1.75rem;
       font-weight: 700;
@@ -546,7 +555,7 @@
   <section id="home" class="hero">
     <div>
       <h1>hi, i'm mohammed zain rafeeque.</h1>
-      <p class="hero-subtitle">AI Engineer & Data Scientist, building intelligent solutions with NLP, LLMs, and cutting-edge ML technologies.</p>
+      <p class="hero-subtitle">AI Engineer at <strong>MTA Investment LLC, Dubai</strong> — building agentic RAG pipelines, multi-modal document intelligence, and domain-specific LLM applications.</p>
       
       <div class="social-links">
         <a href="https://github.com/ZainRafeeque" target="_blank" aria-label="GitHub">
@@ -606,41 +615,66 @@
   <!-- Work Experience -->
   <section id="experience">
     <h2>work experience</h2>
-    
+
     <div class="experience-item">
-      <div class="experience-period">2025 - current</div>
+      <div class="experience-period">Oct 2025 - Current</div>
+      <div class="experience-header">
+        <div class="company-logo text-logo">MTA</div>
+        <div>
+          <div class="experience-title">MTA Investment LLC — Dubai</div>
+          <div class="experience-role">AI Engineer</div>
+        </div>
+      </div>
+      <p class="experience-description">
+        Architecting production-grade agentic RAG pipelines and domain-specific LLM applications.
+        Built a bilingual (English + Farsi) Glass Industry Expert System on a fine-tuned Qwen2.5-14B
+        (vLLM, 4-bit LoRA) with hybrid retrieval — pgvector HNSW + BM25 + Reciprocal Rank Fusion over
+        247K+ chunks, cross-encoder reranking, Redis semantic caching, and a React 18 + TypeScript
+        chat UI deployed via Docker Compose — achieving ~85% retrieval hit rate and 1–5s end-to-end
+        latency. Engineering autonomous retrieval over ChromaDB, MySQL, and Google Drive; building
+        n8n workflow automations and integrating Gemini Vision via Manus AI for multi-lingual scanned
+        PDF intelligence.
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-period">Sept 2025 - Oct 2025</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="1757506317659.jpg" alt="Khansaheb">
         </div>
         <div>
-          <div class="experience-title">Khansaheb Sustainability</div>
-          <div class="experience-role">AI Intern</div>
+          <div class="experience-title">Khansaheb Sustainability — Dubai</div>
+          <div class="experience-role">AI Freelance</div>
         </div>
       </div>
       <p class="experience-description">
-        Deploying RAG + LLM chatbots for intelligent product assistance using LangChain and Groq API. Automating customer inquiries, providing intelligent recommendations, and streamlining support workflows through advanced conversational AI systems.
+        Architected n8n automated workflows to streamline sustainability operations, and delivered
+        a RAG + LLM chatbot prototype with LangChain and Groq API to automate customer inquiries,
+        provide intelligent product advice, and optimize support efficiency.
       </p>
     </div>
 
     <div class="experience-item">
-      <div class="experience-period">2025</div>
+      <div class="experience-period">May 2025 - Aug 2025</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="1736069045693.jpg" alt="Direct Axis">
         </div>
         <div>
-          <div class="experience-title">Direct Axis Technology LLC (Daxis)</div>
+          <div class="experience-title">Direct Axis Technologies — Dubai</div>
           <div class="experience-role">AI Intern</div>
         </div>
       </div>
       <p class="experience-description">
-        Implemented intelligent cheque processing system using neural networks and Python. Automated data extraction, validation, and financial workflows, significantly improving processing efficiency and accuracy.
+        Deployed real-world AI/ML solutions including an intelligent cheque processing system powered
+        by neural networks and Python — automating data extraction, validation, and financial
+        workflows for measurable productivity gains.
       </p>
     </div>
 
     <div class="experience-item">
-      <div class="experience-period">2024 - 2025</div>
+      <div class="experience-period">Oct 2024 - Mar 2025</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="Meta Scifor Icon.png" alt="Meta Scifor">
@@ -651,28 +685,14 @@
         </div>
       </div>
       <p class="experience-description">
-        Completed intensive training in ML algorithms and deep learning frameworks. Strengthened practical knowledge in production ML workflows, model deployment, and optimization strategies through hands-on projects.
+        Completed intensive remote training across ML algorithms and deep learning frameworks.
+        Strengthened production ML workflows, model deployment, and optimization strategies through
+        hands-on Python projects.
       </p>
     </div>
 
     <div class="experience-item">
-      <div class="experience-period">2024</div>
-      <div class="experience-header">
-        <div class="company-logo">
-          <img src="download1.png" alt="Null Class">
-        </div>
-        <div>
-          <div class="experience-title">Null Class</div>
-          <div class="experience-role">AI & Development Trainee</div>
-        </div>
-      </div>
-      <p class="experience-description">
-        Gained hands-on experience with NLTK for NLP, Flask for backend deployment, and integrated advanced language models (Gemini, Palm) through OpenAI API to enhance AI functionality.
-      </p>
-    </div>
-
-    <div class="experience-item">
-      <div class="experience-period">2023</div>
+      <div class="experience-period">May 2023</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="download.jpg" alt="ReverTech">
@@ -683,7 +703,8 @@
         </div>
       </div>
       <p class="experience-description">
-        Enhanced Python programming skills through practical application, focusing on data structures, algorithms, and best coding practices for scalable software development.
+        Enhanced Python programming through hands-on internship work focused on data structures,
+        algorithms, and clean coding practices for scalable software.
       </p>
     </div>
   </section>
