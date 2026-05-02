@@ -276,6 +276,87 @@
       transition: all 0.2s ease;
     }
 
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .project-link.demo {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+    }
+
+    .project-link.demo:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+    }
+
+    .project-link.code {
+      background: #1a1a1a;
+      color: #ccc;
+      border-color: #2a2a2a;
+    }
+
+    .project-link.code:hover {
+      background: #2a2a2a;
+      border-color: #3a3a3a;
+      color: #fff;
+    }
+
+    .project-link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      z-index: 2;
+      padding: 0.3rem 0.65rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #10b981;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      backdrop-filter: blur(6px);
+    }
+
+    .live-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    }
+
     .project-tag:hover {
       background: #2a2a2a;
       border-color: #3a3a3a;
@@ -611,95 +692,195 @@
   <section id="projects">
     <h2>projects</h2>
     <div class="projects-grid">
+
+      <!-- Malayalam Speech Translator (LIVE on HuggingFace) -->
+      <div class="project-card">
+        <div class="project-image">
+          <span class="live-badge">Live Demo</span>
+          <img src="Gemini_Generated_Image_mxm694mxm694mxm6.png" alt="Malayalam Speech-to-Text">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Malayalam Speech Translator</h3>
+          <p class="project-description">
+            End-to-end Malayalam → English speech and text translator deployed on HuggingFace Spaces. Accepts mic recording or any audio format (OGG, MP3, WAV) via Gradio, transcribes with Google Speech API, translates with deep-translator. Includes an offline IndicTrans2 + ctranslate2 NMT pipeline as an alternative backend.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">gradio</span>
+            <span class="project-tag">huggingface</span>
+            <span class="project-tag">speech recognition</span>
+            <span class="project-tag">NLP</span>
+            <span class="project-tag">python</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link demo" href="https://huggingface.co/spaces/ZainRafeeque/malayalam-translator" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"/><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z"/></svg>
+              Live Demo
+            </a>
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Malayalam-speech-translation" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loan Prediction System (LIVE on Streamlit) -->
+      <div class="project-card">
+        <div class="project-image">
+          <span class="live-badge">Live Demo</span>
+          <img src="Gemini_Generated_Image_uxbgzxuxbgzxuxbg.png" alt="Loan Prediction System">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Loan Approval Prediction System</h3>
+          <p class="project-description">
+            End-to-end ML pipeline for automating loan approvals — data preprocessing, feature engineering, model selection (Random Forest / Logistic Regression), and a Streamlit web interface deployed on Streamlit Cloud. Tackles real-world challenges: missing data, outliers, and multicollinearity.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">streamlit</span>
+            <span class="project-tag">scikit-learn</span>
+            <span class="project-tag">pandas</span>
+            <span class="project-tag">flask</span>
+            <span class="project-tag">machine learning</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link demo" href="https://loanpredictionbyzain.streamlit.app/" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"/><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z"/></svg>
+              Live Demo
+            </a>
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Loan_Prediction_Syatem" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RAG Chatbot -->
       <div class="project-card">
         <div class="project-image">
           <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.png" alt="RAG-Powered Chatbot">
         </div>
         <div class="project-content">
-          <h3 class="project-title">RAG-Powered Chatbot</h3>
+          <h3 class="project-title">Khansaheb Sustainability RAG Chatbot</h3>
           <p class="project-description">
-            Deploying intelligent customer assistance system using LangChain and Groq, automating inquiries and product recommendations with retrieval-augmented generation.
+            Production RAG chatbot over Khansaheb's sustainability documents — LangChain + Groq for fast inference, vector retrieval over PDF corpus, and a Node.js front-end. Automates ESG inquiries with grounded, citation-backed answers.
           </p>
           <div class="project-tags">
             <span class="project-tag">langchain</span>
-            <span class="project-tag">LLM</span>
-            <span class="project-tag">RAG</span>
             <span class="project-tag">groq</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">node.js</span>
+            <span class="project-tag">vector DB</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/khansaheb-chatbot" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
           </div>
         </div>
       </div>
 
+      <!-- Glass Engineer -->
       <div class="project-card">
         <div class="project-image">
-          <img src="Gemini_Generated_Image_mxm694mxm694mxm6.png" alt="Malayalam Speech-to-Text">
+          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.png" alt="Glass Engineer AI">
         </div>
         <div class="project-content">
-          <h3 class="project-title">Malayalam Speech-to-Text System</h3>
+          <h3 class="project-title">Glass Engineer AI Assistant</h3>
           <p class="project-description">
-            Pioneered multilingual communication solution enabling seamless Malayalam ↔ English translation with 40% improved efficiency using advanced NLP models and speech recognition.
+            Domain-specific AI assistant for glass engineering specs and product selection. Combines retrieval over technical datasheets with conversational guidance for engineers and architects.
           </p>
           <div class="project-tags">
-            <span class="project-tag">NLP</span>
-            <span class="project-tag">speech processing</span>
-            <span class="project-tag">deep learning</span>
+            <span class="project-tag">LLM</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">domain AI</span>
             <span class="project-tag">python</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Glass_Engineer" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
           </div>
         </div>
       </div>
 
+      <!-- Advertising Dashboard MVP -->
       <div class="project-card">
         <div class="project-image">
-          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.png" alt="AI Learning Style Predictor">
+          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.png" alt="Advertising Dashboard MVP">
         </div>
         <div class="project-content">
-          <h3 class="project-title">AI Learning Style Predictor</h3>
+          <h3 class="project-title">Advertising Dashboard MVP</h3>
           <p class="project-description">
-            Built ML system personalizing education for primary students. Achieved 10% accuracy boost through innovative feature engineering and data unification techniques.
+            Python-based advertising analytics dashboard that aggregates multi-channel ad spend and surfaces ROI insights. Built as an MVP to demonstrate end-to-end data ingestion, transformation, and visualization.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">python</span>
+            <span class="project-tag">analytics</span>
+            <span class="project-tag">dashboard</span>
+            <span class="project-tag">data science</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/MVP-of-Advertising-Dashboard" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Preprocessing -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.png" alt="Image Processing">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Image Preprocessing Toolkit</h3>
+          <p class="project-description">
+            Hands-on Python/OpenCV toolkit covering histogram equalization, morphological ops (erosion, dilation, opening, closing), edge detection, and segmentation (thresholding, k-means, contour). Documented Jupyter notebooks for each technique.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">opencv</span>
+            <span class="project-tag">python</span>
+            <span class="project-tag">computer vision</span>
+            <span class="project-tag">jupyter</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Image_preprocessing" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Autoencoders Tutorial -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.png" alt="Autoencoders Tutorial">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Autoencoders Deep Dive</h3>
+          <p class="project-description">
+            Three-part practical guide to autoencoders: fundamentals, image denoising, and anomaly detection. Demonstrates dimensionality reduction, feature extraction, and reconstruction-loss analysis with TensorFlow/Keras.
           </p>
           <div class="project-tags">
             <span class="project-tag">tensorflow</span>
-            <span class="project-tag">machine learning</span>
-            <span class="project-tag">edtech</span>
-            <span class="project-tag">data science</span>
+            <span class="project-tag">deep learning</span>
+            <span class="project-tag">autoencoders</span>
+            <span class="project-tag">jupyter</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Autoencoders" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-image">
-          <img src="Gemini_Generated_Image_uxbgzxuxbgzxuxbg.png" alt="Intelligent Cheque Processing">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Intelligent Cheque Processing</h3>
-          <p class="project-description">
-            Implemented neural network-based system for automated cheque extraction and validation, streamlining financial workflows with high-accuracy OCR.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">neural networks</span>
-            <span class="project-tag">OCR</span>
-            <span class="project-tag">python</span>
-            <span class="project-tag">opencv</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.png" alt="Image Processing Pipeline">
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Image Processing Pipeline</h3>
-          <p class="project-description">
-            Developed advanced preprocessing pipeline achieving 20% accuracy improvement through sophisticated noise reduction and data augmentation strategies.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">opencv</span>
-            <span class="project-tag">pytorch</span>
-            <span class="project-tag">computer vision</span>
-            <span class="project-tag">preprocessing</span>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -780,7 +961,7 @@
   </section>
 
   <footer style="text-align: center; padding: 2rem 0; color: #666; font-size: 0.9rem;">
-    <p>© 2025 Mohammed Zain Rafeeque. All rights reserved.</p>
+    <p>© 2026 Mohammed Zain Rafeeque. All rights reserved.</p>
     <p style="margin-top: 0.5rem;">Built with passion for AI | Dubai, UAE 🇦🇪</p>
   </footer>
 </body>
