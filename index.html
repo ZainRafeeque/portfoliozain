@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://portfoliozain-cwg6.vercel.app/" />
   <meta property="og:title" content="Zain Rafeeque — AI Engineer · RAG · LLMs · Dubai" />
   <meta property="og:description" content="AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications. 5 live demos. Open to roles in UAE / Remote." />
-  <meta property="og:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.png" />
+  <meta property="og:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -21,10 +21,60 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Zain Rafeeque — AI Engineer · RAG · LLMs · Dubai" />
   <meta name="twitter:description" content="AI Engineer building production RAG systems in Dubai. 5 live demos. Open to opportunities." />
-  <meta name="twitter:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.png" />
+  <meta name="twitter:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.webp" />
 
   <!-- Favicon (inline SVG, no extra request) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter,system-ui,sans-serif' font-size='30' font-weight='800' fill='%2310b981'%3EZR%3C/text%3E%3C/svg%3E" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://portfoliozain-cwg6.vercel.app/" />
+
+  <!-- JSON-LD: Person schema (Google knowledge panel signal) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Zain Rafeeque",
+    "alternateName": "Zain Rafeeque",
+    "jobTitle": "AI Engineer",
+    "description": "AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications.",
+    "url": "https://portfoliozain-cwg6.vercel.app/",
+    "image": "https://portfoliozain-cwg6.vercel.app/IMG_2534.webp",
+    "email": "mailto:zainrafeeque@gmail.com",
+    "telephone": "+971-56-957-0799",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "MTA Investment LLC"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vimal Jyothi Engineering College",
+      "department": "Artificial Intelligence and Data Science"
+    },
+    "sameAs": [
+      "https://github.com/ZainRafeeque",
+      "https://linkedin.com/in/zain-rafeeque/",
+      "https://huggingface.co/ZainRafeeque"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "LangChain",
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "PyTorch",
+      "TensorFlow"
+    ]
+  }
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -733,28 +783,54 @@
       transform: translateY(-2px);
     }
 
-    /* Responsive */
+    /* Responsive — tablet and below */
     @media (max-width: 768px) {
       body {
         padding: 1.5rem;
       }
 
+      nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 2.5rem;
+      }
+
       .hero {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 4rem;
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+        line-height: 1.15;
       }
 
       .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       .hero-image {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
         margin: 0 auto;
+        order: -1; /* photo first on mobile */
+      }
+
+      .status-badge {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.7rem;
+      }
+
+      .hero-ctas {
+        gap: 0.5rem;
+      }
+
+      .cta {
+        font-size: 0.88rem;
+        padding: 0.6rem 1rem;
+        flex: 1 1 auto;
+        justify-content: center;
       }
 
       h2 {
@@ -773,6 +849,81 @@
 
       .projects-grid {
         grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .featured {
+        padding: 1.25rem;
+        margin-top: 2rem;
+        gap: 1.25rem;
+      }
+
+      .featured h3 { font-size: 1.4rem; }
+      .featured-stats { gap: 1rem; padding: 0.75rem 0; }
+      .featured-stat .num { font-size: 1.15rem; }
+
+      .contact-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    }
+
+    /* Phones (small) */
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem;
+      }
+
+      nav {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+
+      .hero h1 {
+        font-size: 1.85rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-top: 3rem;
+      }
+
+      .project-content {
+        padding: 1.25rem;
+      }
+
+      .project-title {
+        font-size: 1.2rem;
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+      }
+
+      .experience-title {
+        font-size: 1.35rem;
+      }
+
+      .experience-role {
+        font-size: 1.05rem;
       }
     }
   </style>
@@ -832,7 +983,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="IMG_2534.png" alt="Mohammed Zain Rafeeque">
+      <img src="IMG_2534.webp" alt="Mohammed Zain Rafeeque">
     </div>
   </section>
 
@@ -921,7 +1072,7 @@
       <div class="experience-period">2025-2026</div>
       <div class="experience-header">
         <div class="company-logo">
-          <img src="mta-logo.jpg" alt="MTA Investment LLC">
+          <img src="mta-logo.webp" alt="MTA Investment LLC">
         </div>
         <div>
           <div class="experience-title">MTA Investment LLC — Dubai</div>
@@ -944,7 +1095,7 @@
       <div class="experience-period">2025</div>
       <div class="experience-header">
         <div class="company-logo">
-          <img src="1757506317659.jpg" alt="Khansaheb">
+          <img src="1757506317659.webp" alt="Khansaheb">
         </div>
         <div>
           <div class="experience-title">Khansaheb Sustainability — Dubai</div>
@@ -962,7 +1113,7 @@
       <div class="experience-period">2025</div>
       <div class="experience-header">
         <div class="company-logo">
-          <img src="1736069045693.jpg" alt="Direct Axis">
+          <img src="1736069045693.webp" alt="Direct Axis">
         </div>
         <div>
           <div class="experience-title">Direct Axis Technologies — Dubai</div>
@@ -980,7 +1131,7 @@
       <div class="experience-period">2024 - 2025</div>
       <div class="experience-header">
         <div class="company-logo">
-          <img src="Meta Scifor Icon.png" alt="Meta Scifor">
+          <img src="Meta Scifor Icon.webp" alt="Meta Scifor">
         </div>
         <div>
           <div class="experience-title">Meta Scifor Technologies</div>
@@ -998,7 +1149,7 @@
       <div class="experience-period">2023</div>
       <div class="experience-header">
         <div class="company-logo">
-          <img src="download.jpg" alt="ReverTech">
+          <img src="download.webp" alt="ReverTech">
         </div>
         <div>
           <div class="experience-title">ReverTech</div>
@@ -1039,7 +1190,7 @@
         </div>
       </div>
       <div class="featured-image">
-        <img src="docintel.png" alt="DocIntel architecture diagram" />
+        <img src="docintel.webp" alt="DocIntel architecture diagram" />
       </div>
     </div>
 
@@ -1049,7 +1200,7 @@
       <div class="project-card">
         <div class="project-image">
           <span class="live-badge">Live Demo</span>
-          <img src="docintel.png" alt="DocIntel - Multi-Modal Document Intelligence">
+          <img src="docintel.webp" alt="DocIntel - Multi-Modal Document Intelligence">
         </div>
         <div class="project-content">
           <h3 class="project-title">DocIntel — Multi-Modal Document Intelligence</h3>
@@ -1081,7 +1232,7 @@
       <div class="project-card">
         <div class="project-image">
           <span class="live-badge">Live Demo</span>
-          <img src="Gemini_Generated_Image_mxm694mxm694mxm6.png" alt="Malayalam Speech-to-Text">
+          <img src="Gemini_Generated_Image_mxm694mxm694mxm6.webp" alt="Malayalam Speech-to-Text">
         </div>
         <div class="project-content">
           <h3 class="project-title">Malayalam Speech Translator</h3>
@@ -1112,7 +1263,7 @@
       <div class="project-card">
         <div class="project-image">
           <span class="live-badge">Live Demo</span>
-          <img src="loan-prediction.png" alt="Loan Prediction System">
+          <img src="loan-prediction.webp" alt="Loan Prediction System">
         </div>
         <div class="project-content">
           <h3 class="project-title">Loan Approval Prediction System</h3>
@@ -1142,7 +1293,7 @@
       <!-- RAG Chatbot -->
       <div class="project-card">
         <div class="project-image">
-          <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.png" alt="RAG-Powered Chatbot">
+          <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.webp" alt="RAG-Powered Chatbot">
         </div>
         <div class="project-content">
           <h3 class="project-title">Khansaheb Sustainability RAG Chatbot</h3>
@@ -1168,7 +1319,7 @@
       <!-- Glass Engineer -->
       <div class="project-card">
         <div class="project-image">
-          <img src="glass-engineer.png" alt="Glass Engineer AI">
+          <img src="glass-engineer.webp" alt="Glass Engineer AI">
         </div>
         <div class="project-content">
           <h3 class="project-title">Glass Engineer AI — Bilingual RAG Expert System</h3>
@@ -1194,7 +1345,7 @@
       <!-- Advertising Dashboard MVP -->
       <div class="project-card">
         <div class="project-image">
-          <img src="advertising-dashboard.png" alt="Advertising Dashboard MVP">
+          <img src="advertising-dashboard.webp" alt="Advertising Dashboard MVP">
         </div>
         <div class="project-content">
           <h3 class="project-title">Advertising Dashboard MVP</h3>
@@ -1220,7 +1371,7 @@
       <div class="project-card">
         <div class="project-image">
           <span class="live-badge">Live Demo</span>
-          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.png" alt="Image Processing">
+          <img src="Gemini_Generated_Image_x2adx1x2adx1x2ad.webp" alt="Image Processing">
         </div>
         <div class="project-content">
           <h3 class="project-title">Image Preprocessing Toolkit</h3>
@@ -1249,7 +1400,7 @@
       <!-- Autoencoders Tutorial -->
       <div class="project-card">
         <div class="project-image">
-          <img src="autoencoders.png" alt="Autoencoders Deep Dive">
+          <img src="autoencoders.webp" alt="Autoencoders Deep Dive">
         </div>
         <div class="project-content">
           <h3 class="project-title">Autoencoders Deep Dive</h3>
@@ -1275,7 +1426,7 @@
       <div class="project-card">
         <div class="project-image">
           <span class="live-badge">Live Demo</span>
-          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.png" alt="AI Learning Style Predictor">
+          <img src="Gemini_Generated_Image_yuf4q2yuf4q2yuf4.webp" alt="AI Learning Style Predictor">
         </div>
         <div class="project-content">
           <h3 class="project-title">AI Learning Style Predictor</h3>
@@ -1305,7 +1456,7 @@
       <!-- Intelligent Cheque Processing -->
       <div class="project-card">
         <div class="project-image">
-          <img src="Gemini_Generated_Image_uxbgzxuxbgzxuxbg.png" alt="Intelligent Cheque Processing">
+          <img src="Gemini_Generated_Image_uxbgzxuxbgzxuxbg.webp" alt="Intelligent Cheque Processing">
         </div>
         <div class="project-content">
           <h3 class="project-title">Intelligent Cheque Processing</h3>
@@ -1336,7 +1487,7 @@
     <div class="education-item">
       <div class="education-header">
         <div class="education-logo">
-          <img src="vimaljyothi.jpg" alt="Vimal Jyothi">
+          <img src="vimaljyothi.webp" alt="Vimal Jyothi">
         </div>
         <div>
           <div class="education-title">Vimal Jyothi Engineering College</div>
