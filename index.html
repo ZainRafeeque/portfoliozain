@@ -1197,36 +1197,36 @@
   <section id="projects">
     <h2>projects</h2>
 
-    <!-- Featured: Wakeel -->
+    <!-- Featured: DocIntel (live & deployed) -->
     <div class="featured">
       <div>
-        <span class="featured-tag">⚡ Latest Shipped · May 2026</span>
-        <h3>Wakeel — Domain-Specific Legal AI Platform (UAE)</h3>
-        <p>Extends classic RAG with <strong>semantic lawyer matching</strong> (MiniLM + cosine similarity), <strong>intake parsing</strong> via Gemini Vision OCR + Llama-3.3-70B structured extraction, and a <strong>consultation booking flow</strong> &mdash; beyond document Q&amp;A. Hermetic eval harness on 30 hand-curated UAE-law questions. Reliability scaffolding throughout: per-request UUID tracing via ContextVar, JSON structured logging, retry-with-exponential-backoff, graceful mock-mode fallback, full pytest suite.</p>
+        <span class="featured-tag">⚡ Latest Shipped · live</span>
+        <h3>DocIntel — Multi-Modal Document Intelligence Platform</h3>
+        <p>Drop any PDF and chat with it. Hybrid retrieval (sentence-transformers MiniLM + BM25 fused via reciprocal rank fusion), Groq Llama-3.3-70B for cited answers, structured JSON extraction with one-click CSV export. <strong>FastAPI backend on Render + Next.js 14 frontend on Vercel</strong>.</p>
         <div class="featured-stats">
-          <div class="featured-stat"><div class="num">100%</div><div class="label">Hit@5 on UAE-law eval</div></div>
-          <div class="featured-stat"><div class="num">1.000</div><div class="label">Mean Reciprocal Rank</div></div>
-          <div class="featured-stat"><div class="num">7.2&nbsp;ms</div><div class="label">Median retrieval (p95: 9.7&nbsp;ms)</div></div>
+          <div class="featured-stat"><div class="num">&lt; 1s</div><div class="label">Citation retrieval</div></div>
+          <div class="featured-stat"><div class="num">Hybrid</div><div class="label">Dense + BM25 + RRF</div></div>
+          <div class="featured-stat"><div class="num">Full-stack</div><div class="label">Next.js + FastAPI</div></div>
         </div>
         <div class="project-links">
-          <a class="project-link code" href="https://github.com/ZainRafeeque/Wakeel" target="_blank" rel="noopener">
-            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            Code on GitHub
-          </a>
           <a class="project-link demo" href="https://doc-intel-delta.vercel.app" target="_blank" rel="noopener">
             <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"/><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z"/></svg>
-            Try DocIntel (live)
+            Try Live Demo
+          </a>
+          <a class="project-link code" href="https://github.com/ZainRafeeque/DocIntel" target="_blank" rel="noopener">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Code on GitHub
           </a>
         </div>
       </div>
       <div class="featured-image">
-        <img src="wakeel.webp" alt="Wakeel — Domain-Specific Legal AI Platform" onerror="this.src='docintel.webp'" />
+        <img src="docintel.webp" alt="DocIntel architecture diagram" />
       </div>
     </div>
 
     <div class="projects-grid">
 
-      <!-- Wakeel - Domain-Specific Legal AI Platform (UAE) -->
+      <!-- Wakeel - Domain-Specific Legal AI Platform (prototype) -->
       <div class="project-card">
         <div class="project-image">
           <img src="wakeel.webp" alt="Wakeel - Domain-Specific Legal AI Platform" onerror="this.src='docintel.webp'">
@@ -1234,7 +1234,7 @@
         <div class="project-content">
           <h3 class="project-title">Wakeel — Domain-Specific Legal AI Platform (UAE)</h3>
           <p class="project-description">
-            Domain-specific legal AI platform that extends classic RAG with <strong>semantic lawyer matching</strong> (MiniLM embeddings + cosine similarity), <strong>intake parsing</strong> via Gemini Vision OCR + Llama-3.3-70B structured extraction, and a <strong>consultation booking flow</strong>. Hermetic eval harness on 30 hand-curated UAE-law questions: <strong>Hit@5 = 100%</strong>, MRR = 1.000, keyword faithfulness = 98.3%, median retrieval latency 7.2&nbsp;ms (p95 9.7&nbsp;ms). Reliability scaffolding throughout — per-request UUID tracing via ContextVar, JSON structured logging with token-usage + latency per LLM call, retry-with-exponential-backoff, graceful mock-mode fallback, full pytest suite.
+            Production-grade prototype that extends classic RAG with <strong>semantic lawyer matching</strong> (MiniLM embeddings + cosine similarity), <strong>intake parsing</strong> via Gemini Vision OCR + Llama-3.3-70B structured extraction, and a <strong>consultation booking flow</strong>. Hermetic eval harness on 30 hand-curated UAE-law questions: <strong>Hit@5 = 100%</strong>, MRR = 1.000, keyword faithfulness = 98.3%, median retrieval latency 7.2&nbsp;ms (p95 9.7&nbsp;ms) — runs deterministically without API keys. Reliability scaffolding throughout: per-request UUID tracing via ContextVar, JSON structured logging with token-usage + latency per LLM call, retry-with-exponential-backoff, graceful mock-mode fallback, full pytest suite. Not deployed publicly; runs locally end-to-end.
           </p>
           <div class="project-tags">
             <span class="project-tag">FastAPI</span>
