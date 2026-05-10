@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Zain Rafeeque — AI Engineer · RAG · LLMs · Dubai</title>
-  <meta name="description" content="AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications. 5 live demos. Open to AI Engineer roles in UAE / Remote." />
+  <meta name="description" content="AI Engineer specialized in production RAG over large multilingual corpora — most recently shipped a bilingual (English + Farsi) system over 247K+ chunks at MTA Investment Dubai. Live demos · DCAI-certified · UAE Resident · available immediately." />
   <meta name="author" content="Mohammed Zain Rafeeque" />
   <meta name="keywords" content="AI Engineer, Machine Learning Engineer, RAG, LLM, LangChain, Dubai, UAE, Zain Rafeeque" />
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://portfoliozain-cwg6.vercel.app/" />
   <meta property="og:title" content="Zain Rafeeque — AI Engineer · RAG · LLMs · Dubai" />
-  <meta property="og:description" content="AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications. 5 live demos. Open to roles in UAE / Remote." />
+  <meta property="og:description" content="AI Engineer · production RAG over large multilingual corpora · bilingual EN+FA system over 247K+ chunks at MTA Investment Dubai · DCAI-certified · UAE Resident · available immediately." />
   <meta property="og:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,7 +20,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Zain Rafeeque — AI Engineer · RAG · LLMs · Dubai" />
-  <meta name="twitter:description" content="AI Engineer building production RAG systems in Dubai. 5 live demos. Open to opportunities." />
+  <meta name="twitter:description" content="AI Engineer · production RAG over large multilingual corpora · live demos · UAE Resident · available immediately." />
   <meta name="twitter:image" content="https://portfoliozain-cwg6.vercel.app/IMG_2534.webp" />
 
   <!-- Favicon (inline SVG, no extra request) -->
@@ -37,7 +37,7 @@
     "name": "Mohammed Zain Rafeeque",
     "alternateName": "Zain Rafeeque",
     "jobTitle": "AI Engineer",
-    "description": "AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications.",
+    "description": "AI Engineer specialized in production RAG over large multilingual corpora. Shipped a bilingual (English + Farsi) RAG system over 247K+ document chunks at MTA Investment Dubai. DCAI-certified, UAE Resident, available immediately.",
     "url": "https://portfoliozain-cwg6.vercel.app/",
     "image": "https://portfoliozain-cwg6.vercel.app/IMG_2534.webp",
     "email": "mailto:zainrafeeque@gmail.com",
@@ -46,10 +46,6 @@
       "@type": "PostalAddress",
       "addressLocality": "Dubai",
       "addressCountry": "AE"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "MTA Investment LLC"
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
@@ -67,6 +63,10 @@
       "Large Language Models",
       "Retrieval-Augmented Generation",
       "LangChain",
+      "vLLM",
+      "Fine-tuning",
+      "pgvector",
+      "MCP",
       "Python",
       "FastAPI",
       "Next.js",
@@ -467,6 +467,30 @@
       line-height: 1.7;
       font-size: 1rem;
       margin-left: 76px;
+    }
+
+    ul.experience-description {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.experience-description li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul.experience-description li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-size: 0.85em;
+      top: 0.15em;
+    }
+
+    ul.experience-description li:last-child {
+      margin-bottom: 0;
     }
 
     /* Projects */
@@ -940,9 +964,9 @@
   <!-- Hero -->
   <section id="home" class="hero">
     <div>
-      <span class="status-badge">Open to AI Engineer roles · Dubai / UAE / Remote</span>
+      <span class="status-badge">UAE Resident · DCAI-certified · available immediately</span>
       <h1>hi, i'm mohammed zain rafeeque.</h1>
-      <p class="hero-subtitle">AI Engineer shipping production RAG systems, multi-modal document intelligence, and domain-specific LLM applications &mdash; with live demos to prove it.</p>
+      <p class="hero-subtitle">AI Engineer specialized in production RAG over large multilingual corpora &mdash; most recently shipped a bilingual <strong>English&nbsp;+&nbsp;Farsi</strong> system over <strong>247K+ document chunks</strong> at MTA Investment Dubai (~85% retrieval hit rate, 1&ndash;5&nbsp;s latency). I focus on systems that ship: measured retrieval quality, deterministic test mode, and observability built in from day one.</p>
 
       <div class="hero-ctas">
         <a class="cta cta-primary" href="Zain-Rafeeque-CV-2026.pdf" download>
@@ -992,60 +1016,64 @@
     <h2>skills</h2>
     <div class="skills-grid">
       <div class="skill-category">
-        <h3>Languages</h3>
+        <h3>Core</h3>
         <div class="pills">
           <span class="skill-pill">Python</span>
-          <span class="skill-pill">TypeScript</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">R</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>LLMs &amp; RAG</h3>
-        <div class="pills">
           <span class="skill-pill">LangChain</span>
+          <span class="skill-pill">RAG</span>
+          <span class="skill-pill">Fine-tuning</span>
           <span class="skill-pill">vLLM</span>
+          <span class="skill-pill">FastAPI</span>
           <span class="skill-pill">pgvector</span>
-          <span class="skill-pill">ChromaDB</span>
-          <span class="skill-pill">BM25 + RRF</span>
-          <span class="skill-pill">Cross-encoder reranking</span>
-          <span class="skill-pill">Sentence-Transformers</span>
+          <span class="skill-pill">MCP</span>
         </div>
       </div>
       <div class="skill-category">
-        <h3>AI Platforms</h3>
+        <h3>AI / ML</h3>
+        <div class="pills">
+          <span class="skill-pill">LLMs</span>
+          <span class="skill-pill">LangGraph</span>
+          <span class="skill-pill">Prompt Engineering</span>
+          <span class="skill-pill">Sentence-Transformers</span>
+          <span class="skill-pill">Hugging Face</span>
+          <span class="skill-pill">OpenCV</span>
+          <span class="skill-pill">Prophet</span>
+          <span class="skill-pill">NumPy / Pandas</span>
+          <span class="skill-pill">Scikit-learn</span>
+          <span class="skill-pill">TensorFlow</span>
+          <span class="skill-pill">PyTorch</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>LLM Platforms</h3>
         <div class="pills">
           <span class="skill-pill">Claude (Anthropic)</span>
+          <span class="skill-pill">Claude Code</span>
           <span class="skill-pill">OpenAI</span>
           <span class="skill-pill">Groq</span>
           <span class="skill-pill">Gemini Vision</span>
           <span class="skill-pill">Manus AI</span>
-          <span class="skill-pill">HuggingFace</span>
-          <span class="skill-pill">n8n</span>
         </div>
       </div>
       <div class="skill-category">
-        <h3>ML / DL</h3>
+        <h3>Databases</h3>
         <div class="pills">
-          <span class="skill-pill">PyTorch</span>
-          <span class="skill-pill">TensorFlow / Keras</span>
-          <span class="skill-pill">Scikit-learn</span>
-          <span class="skill-pill">NumPy / Pandas</span>
-          <span class="skill-pill">OpenCV</span>
-          <span class="skill-pill">NLTK</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h3>Backend &amp; Infra</h3>
-        <div class="pills">
-          <span class="skill-pill">FastAPI</span>
-          <span class="skill-pill">Flask</span>
-          <span class="skill-pill">Docker</span>
           <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">pgvector</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">ChromaDB</span>
           <span class="skill-pill">Redis</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Backend &amp; DevOps</h3>
+        <div class="pills">
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">GitHub Actions (CI/CD)</span>
+          <span class="skill-pill">FastAPI</span>
           <span class="skill-pill">Nginx</span>
-          <span class="skill-pill">Linux / Bash</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">n8n</span>
         </div>
       </div>
       <div class="skill-category">
@@ -1053,12 +1081,22 @@
         <div class="pills">
           <span class="skill-pill">Next.js 14</span>
           <span class="skill-pill">React 18</span>
-          <span class="skill-pill">Tailwind CSS</span>
+          <span class="skill-pill">TypeScript</span>
+          <span class="skill-pill">Tailwind</span>
           <span class="skill-pill">Streamlit</span>
           <span class="skill-pill">Gradio</span>
           <span class="skill-pill">Vercel</span>
           <span class="skill-pill">Render</span>
           <span class="skill-pill">HuggingFace Spaces</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <div class="pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">R</span>
         </div>
       </div>
     </div>
@@ -1069,7 +1107,7 @@
     <h2>work experience</h2>
 
     <div class="experience-item">
-      <div class="experience-period">2025-2026</div>
+      <div class="experience-period">Oct 2025 — Apr 2026</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="mta-logo.webp" alt="MTA Investment LLC">
@@ -1079,84 +1117,79 @@
           <div class="experience-role">AI Engineer</div>
         </div>
       </div>
-      <p class="experience-description">
-        Architecting production RAG systems and domain-specific LLM applications. Designed and
-        shipped the bilingual <strong>Glass Industry Expert System</strong> &mdash; a fine-tuned
-        Qwen2.5-14B with hybrid retrieval over 247K+ chunks &mdash; sustaining
-        <strong>~85% hit rate</strong> at <strong>1&ndash;5&nbsp;s latency</strong>. Also building
-        autonomous retrieval pipelines and n8n workflow automations integrated with Gemini Vision.
-      </p>
+      <ul class="experience-description">
+        <li>
+          Architected a production-grade bilingual (English&nbsp;+&nbsp;Farsi) RAG expert system for
+          glass-manufacturing engineers, combining a fine-tuned <strong>Qwen2.5-14B</strong> with a
+          hybrid retrieval pipeline (<strong>pgvector + BM25 + RRF</strong>, cross-encoder reranking)
+          over <strong>247K+ document chunks</strong>.
+        </li>
+        <li>
+          Delivered the full stack with a <strong>React 18 + TypeScript</strong> chat UI and Redis
+          semantic caching, achieving <strong>~85% retrieval hit rate</strong> and
+          <strong>1&ndash;5&nbsp;s end-to-end latency</strong>.
+        </li>
+        <li>
+          Engineered deployed autonomous agentic RAG pipelines using ChromaDB, MySQL, and Google
+          Drive for intelligent data querying across internal business systems.
+        </li>
+        <li>
+          Built end-to-end automation flows in <strong>n8n</strong>, deployed Gemini Vision API via
+          Manus AI to extract data from multi-lingual scanned PDFs, and developed custom APIs that
+          connected Manus AI to internal databases &mdash; simplifying AI access for non-technical
+          users.
+        </li>
+      </ul>
     </div>
 
     <div class="experience-item">
-      <div class="experience-period">2025</div>
-      <div class="experience-header">
-        <div class="company-logo">
-          <img src="1757506317659.webp" alt="Khansaheb">
-        </div>
-        <div>
-          <div class="experience-title">Khansaheb Sustainability — Dubai</div>
-          <div class="experience-role">AI Freelance</div>
-        </div>
-      </div>
-      <p class="experience-description">
-        Architected n8n automated workflows to streamline sustainability operations, and delivered
-        a RAG + LLM chatbot prototype with LangChain and Groq API to automate customer inquiries,
-        provide intelligent product advice, and optimize support efficiency.
-      </p>
-    </div>
-
-    <div class="experience-item">
-      <div class="experience-period">2025</div>
+      <div class="experience-period">May 2025 — Aug 2025</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="1736069045693.webp" alt="Direct Axis">
         </div>
         <div>
           <div class="experience-title">Direct Axis Technologies — Dubai</div>
-          <div class="experience-role">AI Intern</div>
+          <div class="experience-role">AI Engineer (Internship)</div>
         </div>
       </div>
-      <p class="experience-description">
-        Deployed real-world AI/ML solutions including an intelligent cheque processing system powered
-        by neural networks and Python — automating data extraction, validation, and financial
-        workflows for measurable productivity gains.
-      </p>
+      <ul class="experience-description">
+        <li>
+          Built a Python <strong>cheque-processing pipeline</strong> combining OpenCV template
+          matching with deep-learning-based OCR to extract payee, amount, date, and signature
+          fields from cheque images.
+        </li>
+        <li>
+          Built a Python <strong>time-series forecasting pipeline</strong> using Facebook Prophet
+          &mdash; JSON-based data I/O, configurable seasonality and changepoint controls,
+          MAE/MAPE/RMSE evaluation, cross-validation, and grid-search hyperparameter tuning for
+          financial-workflow forecasts.
+        </li>
+      </ul>
     </div>
 
     <div class="experience-item">
-      <div class="experience-period">2024 - 2025</div>
+      <div class="experience-period">Oct 2024 — Mar 2025</div>
       <div class="experience-header">
         <div class="company-logo">
           <img src="Meta Scifor Icon.webp" alt="Meta Scifor">
         </div>
         <div>
           <div class="experience-title">Meta Scifor Technologies</div>
-          <div class="experience-role">AI/ML Trainee</div>
+          <div class="experience-role">AI/ML Engineer (Training Program)</div>
         </div>
       </div>
-      <p class="experience-description">
-        Completed intensive remote training across ML algorithms and deep learning frameworks.
-        Strengthened production ML workflows, model deployment, and optimization strategies through
-        hands-on Python projects.
-      </p>
-    </div>
-
-    <div class="experience-item">
-      <div class="experience-period">2023</div>
-      <div class="experience-header">
-        <div class="company-logo">
-          <img src="download.webp" alt="ReverTech">
-        </div>
-        <div>
-          <div class="experience-title">ReverTech</div>
-          <div class="experience-role">Python Intern</div>
-        </div>
-      </div>
-      <p class="experience-description">
-        Enhanced Python programming through hands-on internship work focused on data structures,
-        algorithms, and clean coding practices for scalable software.
-      </p>
+      <ul class="experience-description">
+        <li>
+          Completed a remote AI/ML training program covering machine-learning algorithms,
+          deep-learning frameworks, and Python engineering.
+        </li>
+        <li>
+          Capstone: built an ML pipeline classifying students into VARK learning styles &mdash;
+          lifted accuracy from a <strong>59.2% baseline to 84.5% (+25.3&nbsp;pp)</strong> with
+          engineered features and a Streamlit demo.
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -1164,34 +1197,61 @@
   <section id="projects">
     <h2>projects</h2>
 
-    <!-- Featured: DocIntel -->
+    <!-- Featured: Wakeel -->
     <div class="featured">
       <div>
-        <span class="featured-tag">⚡ Latest Shipped</span>
-        <h3>DocIntel — Multi-Modal Document Intelligence Platform</h3>
-        <p>Drop any PDF and chat with it. Hybrid retrieval (sentence-transformers MiniLM + BM25 fused via reciprocal rank fusion), Groq Llama-3.3-70B for cited answers, structured JSON extraction with one-click CSV export. <strong>FastAPI backend on Render + Next.js 14 frontend on Vercel</strong>.</p>
+        <span class="featured-tag">⚡ Latest Shipped · May 2026</span>
+        <h3>Wakeel — Domain-Specific Legal AI Platform (UAE)</h3>
+        <p>Extends classic RAG with <strong>semantic lawyer matching</strong> (MiniLM + cosine similarity), <strong>intake parsing</strong> via Gemini Vision OCR + Llama-3.3-70B structured extraction, and a <strong>consultation booking flow</strong> &mdash; beyond document Q&amp;A. Hermetic eval harness on 30 hand-curated UAE-law questions. Reliability scaffolding throughout: per-request UUID tracing via ContextVar, JSON structured logging, retry-with-exponential-backoff, graceful mock-mode fallback, full pytest suite.</p>
         <div class="featured-stats">
-          <div class="featured-stat"><div class="num">&lt; 1s</div><div class="label">Citation retrieval</div></div>
-          <div class="featured-stat"><div class="num">Hybrid</div><div class="label">Dense + BM25 + RRF</div></div>
-          <div class="featured-stat"><div class="num">Full-stack</div><div class="label">Next.js + FastAPI</div></div>
+          <div class="featured-stat"><div class="num">100%</div><div class="label">Hit@5 on UAE-law eval</div></div>
+          <div class="featured-stat"><div class="num">1.000</div><div class="label">Mean Reciprocal Rank</div></div>
+          <div class="featured-stat"><div class="num">7.2&nbsp;ms</div><div class="label">Median retrieval (p95: 9.7&nbsp;ms)</div></div>
         </div>
         <div class="project-links">
-          <a class="project-link demo" href="https://doc-intel-delta.vercel.app" target="_blank" rel="noopener">
-            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"/><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z"/></svg>
-            Try Live Demo
-          </a>
-          <a class="project-link code" href="https://github.com/ZainRafeeque/DocIntel" target="_blank" rel="noopener">
+          <a class="project-link code" href="https://github.com/ZainRafeeque/Wakeel" target="_blank" rel="noopener">
             <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             Code on GitHub
+          </a>
+          <a class="project-link demo" href="https://doc-intel-delta.vercel.app" target="_blank" rel="noopener">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"/><path d="M19 19H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2z"/></svg>
+            Try DocIntel (live)
           </a>
         </div>
       </div>
       <div class="featured-image">
-        <img src="docintel.webp" alt="DocIntel architecture diagram" />
+        <img src="wakeel.webp" alt="Wakeel — Domain-Specific Legal AI Platform" onerror="this.src='docintel.webp'" />
       </div>
     </div>
 
     <div class="projects-grid">
+
+      <!-- Wakeel - Domain-Specific Legal AI Platform (UAE) -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="wakeel.webp" alt="Wakeel - Domain-Specific Legal AI Platform" onerror="this.src='docintel.webp'">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Wakeel — Domain-Specific Legal AI Platform (UAE)</h3>
+          <p class="project-description">
+            Domain-specific legal AI platform that extends classic RAG with <strong>semantic lawyer matching</strong> (MiniLM embeddings + cosine similarity), <strong>intake parsing</strong> via Gemini Vision OCR + Llama-3.3-70B structured extraction, and a <strong>consultation booking flow</strong>. Hermetic eval harness on 30 hand-curated UAE-law questions: <strong>Hit@5 = 100%</strong>, MRR = 1.000, keyword faithfulness = 98.3%, median retrieval latency 7.2&nbsp;ms (p95 9.7&nbsp;ms). Reliability scaffolding throughout — per-request UUID tracing via ContextVar, JSON structured logging with token-usage + latency per LLM call, retry-with-exponential-backoff, graceful mock-mode fallback, full pytest suite.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">Next.js 14</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">Gemini Vision</span>
+            <span class="project-tag">Groq</span>
+            <span class="project-tag">eval harness</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Wakeel" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
 
       <!-- DocIntel - Multi-Modal Document Intelligence (LIVE flagship) -->
       <div class="project-card">
@@ -1287,28 +1347,54 @@
         </div>
       </div>
 
-      <!-- RAG Chatbot -->
+      <!-- Agentic RAG System - Multi-Agent Architecture -->
       <div class="project-card">
         <div class="project-image">
-          <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.webp" alt="RAG-Powered Chatbot">
+          <img src="Gemini_Generated_Image_hwl8uhhwl8uhhwl8.webp" alt="Agentic RAG System">
         </div>
         <div class="project-content">
-          <h3 class="project-title">Khansaheb Sustainability RAG Chatbot</h3>
+          <h3 class="project-title">Agentic RAG System — Multi-Agent Architecture</h3>
           <p class="project-description">
-            Production RAG chatbot over Khansaheb's sustainability documents — LangChain + Groq for fast inference, vector retrieval over PDF corpus, and a Node.js front-end. Automates ESG inquiries with grounded, citation-backed answers. Built for <strong>Khansaheb Sustainability, Dubai</strong>; source code lives in a private client repository.
+            <strong>4-agent retrieval pipeline</strong> (Router → Planner → Executor → Synthesizer) over a ChromaDB vector store, served via FastAPI with sentence-transformers embeddings and an Ollama-backed local LLM. Extended with a <strong>ConnectorFactory</strong> pattern and <strong>5 source connectors</strong> — local files (PDF/DOCX/TXT/CSV), PostgreSQL, MySQL, REST APIs, Google Drive — all yielding a unified Document interface. IngestionAgent orchestrates extract → sentence-aware chunk → embed → store with batched writes and IngestionReport summaries. 15 tests.
           </p>
           <div class="project-tags">
-            <span class="project-tag">langchain</span>
-            <span class="project-tag">groq</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">ChromaDB</span>
+            <span class="project-tag">multi-agent</span>
+            <span class="project-tag">Ollama</span>
             <span class="project-tag">RAG</span>
-            <span class="project-tag">node.js</span>
-            <span class="project-tag">vector DB</span>
           </div>
           <div class="project-links">
-            <span class="project-link private" title="Source code is in a private client repository">
-              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
-              Private Repo
-            </span>
+            <a class="project-link code" href="https://github.com/ZainRafeeque/Agentic_rag" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time-Series Forecasting Pipeline (Prophet) -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="time-series.webp" alt="Time-Series Forecasting Pipeline" onerror="this.src='loan-prediction.webp'">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Time-Series Forecasting Pipeline (Prophet)</h3>
+          <p class="project-description">
+            Production-grade Facebook Prophet pipeline for univariate time-series forecasting — <strong>configurable seasonality and changepoint controls</strong>, full <strong>MAE / MAPE / RMSE</strong> evaluation, time-series cross-validation, and grid-search hyperparameter tuning. Wrapped in a Streamlit web app so anyone can drop in a CSV and get a forecast. Originally built during the Direct Axis internship for financial-workflow forecasting; open-sourced as a clean, generic pipeline template.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Prophet</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">forecasting</span>
+            <span class="project-tag">cross-validation</span>
+            <span class="project-tag">python</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/ZainRafeeque/time-series-forecasting" target="_blank" rel="noopener">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
           </div>
         </div>
       </div>
